@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "Did Somebody Say: Fake News?",
+  "version": "1.0.0",
+  "description": "Like The New York Times, but faker.",
+
+  "author": "LuciaH",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["content-scripts/css/fake-news.css"],
+      "js": [
+              "content-scripts/jquery-1.11.1.js",
+              "content-scripts/fake-news.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "*://*/*",
+    "activeTab",
+    "storage",
+    "declarativeContent"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "popup/icon.png",
+    "default_title": "Fake News",
+    "default_popup": "popup/popup.html"
+  }
+}
