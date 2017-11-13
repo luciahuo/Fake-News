@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Like The New York Times, but faker.",
 
-  "author": "LuciaH",
+  "author": "LuciaH (& CIS 197)",
   "content_scripts": [
     {
       "matches": ["*://*/*"],
